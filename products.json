@@ -1,0 +1,75 @@
+{
+  "currency": "KES",
+  "currencySymbol": "KSh",
+  "taxRate": 0.16,
+  "shippingFlat": 350,
+  "freeShippingThreshold": 15000,
+  "products": [
+    {
+      "id": "svc-social-mgmt",
+      "name": "Social Media Management",
+      "category": "Service",
+      "price": 28000,
+      "image": "assets/prod-social.jpg",
+      "description": "Monthly content calendar, designed posts, stories, and reels across your platforms.",
+      "longDescription": "We handle calendar, copy, and visuals across Instagram, Facebook, TikTok, and LinkedIn. Includes one strategy call, monthly analytics, and a hand-off-ready content bank.",
+      "tags": ["social", "content", "monthly"],
+      "deliveryNote": "Digital deliverable — no shipping required."
+    },
+    {
+      "id": "svc-brand-identity",
+      "name": "Logo & Brand Identity",
+      "category": "Service",
+      "price": 35000,
+      "image": "assets/prod-branding.jpg",
+      "description": "Logo system, business cards, letterheads, and full brand guide.",
+      "longDescription": "From discovery to delivery in two weeks. Logo, color, typography, business card design, letterhead, social templates, and a brand guide ready for any partner agency or printer.",
+      "tags": ["branding", "identity", "logo"],
+      "deliveryNote": "Digital deliverable. Print options quoted separately."
+    },
+    {
+      "id": "svc-website",
+      "name": "Website Design & Build",
+      "category": "Service",
+      "price": 65000,
+      "image": "assets/prod-web.jpg",
+      "description": "Modern, responsive website with copywriting included. Built in three weeks.",
+      "longDescription": "Strategy, wireframes, design, build, and launch — done. Optimised for speed and mobile, with a simple CMS handover so your team can update content without us.",
+      "tags": ["web", "design", "development"],
+      "deliveryNote": "Digital deliverable — hosted on your domain."
+    },
+    {
+      "id": "svc-packaging",
+      "name": "Product Labels & Packaging",
+      "category": "Service",
+      "price": 18000,
+      "image": "assets/prod-packaging.jpg",
+      "description": "Standout product labels and packaging designed for shelf appeal.",
+      "longDescription": "Custom label and packaging design for food, cosmetics, and consumer goods. Includes print-ready files and three rounds of revisions. Recent clients: Ster Organics.",
+      "tags": ["packaging", "labels", "print"],
+      "deliveryNote": "Print-ready files. We can coordinate with your printer."
+    },
+    {
+      "id": "svc-promo",
+      "name": "Promotional Flyer & Poster",
+      "category": "Service",
+      "price": 3500,
+      "image": "assets/prod-promo.jpg",
+      "description": "Eye-catching promotional designs for events, offers, and campaigns.",
+      "longDescription": "Single-piece promotional design — flyer, poster, or social campaign asset. 48-hour turnaround on first draft. Includes print-ready and social-sized files.",
+      "tags": ["flyer", "poster", "promo"],
+      "deliveryNote": "Digital files within 48 hours."
+    },
+    {
+      "id": "svc-content",
+      "name": "Product Photography & Content",
+      "category": "Service",
+      "price": 12000,
+      "image": "assets/prod-content.jpg",
+      "description": "Branded product photography and short-form video content.",
+      "longDescription": "Half-day shoot at our Nairobi studio. Up to 15 finished product photos and 3 short-form video clips, edited and delivered in your brand colors.",
+      "tags": ["photography", "content", "video"],
+      "deliveryNote": "Digital files within 5 business days."
+    }
+  ]
+}

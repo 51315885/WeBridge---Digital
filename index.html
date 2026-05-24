@@ -1,0 +1,557 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="theme-color" content="#101132" />
+
+  <title>WeBridge Digital — We Connect. You Grow.</title>
+  <meta name="description" content="WeBridge Digital is a Nairobi-based creative agency. Brand identity, social media, web design, and branded merchandise — built to make you unmissable." />
+
+  <meta property="og:type" content="website" />
+  <meta property="og:title" content="WeBridge Digital — We Connect. You Grow." />
+  <meta property="og:description" content="Brand identity, social media, web design, and branded merchandise from Nairobi's growth-focused creative agency." />
+  <meta property="og:image" content="assets/hero-bg.jpg" />
+  <meta property="og:url" content="https://webridgedigital.example/" />
+  <meta name="twitter:card" content="summary_large_image" />
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,400;0,500;0,600;0,700;0,800;0,900;1,500;1,700&family=Source+Sans+3:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
+
+  <link rel="stylesheet" href="styles.css" />
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Organization",
+    "name": "WeBridge Digital",
+    "url": "https://webridgedigital.example",
+    "logo": "https://webridgedigital.example/logo.png",
+    "description": "Creative digital agency offering branding, social media, web design and branded merchandise.",
+    "address": {
+      "@type": "PostalAddress",
+      "addressLocality": "Nairobi",
+      "addressCountry": "KE"
+    },
+    "contactPoint": {
+      "@type": "ContactPoint",
+      "telephone": "+254-700-000-000",
+      "contactType": "Customer Service",
+      "email": "hello@webridgedigital.example"
+    },
+    "sameAs": [
+      "https://instagram.com/webridgedigital",
+      "https://linkedin.com/company/webridgedigital"
+    ]
+  }
+  </script>
+</head>
+<body>
+  <a href="#main" class="skip-link">Skip to main content</a>
+
+  <div class="grain" aria-hidden="true"></div>
+
+  <header class="site-header" role="banner">
+    <div class="container header-inner">
+      <a href="#top" class="logo" aria-label="WeBridge Digital home">
+        <img src="assets/logo.jpg" alt="WeBridge Digital" class="logo-img" width="48" height="48" />
+        <span class="logo-text">
+          <strong>WEBRIDGE <em>DIGITAL</em></strong>
+          <span class="logo-tag">we connect. you grow.</span>
+        </span>
+      </a>
+
+      <nav class="primary-nav" aria-label="Primary">
+        <ul>
+          <li><a href="#offer">What we do</a></li>
+          <li><a href="#shop">Shop</a></li>
+          <li><a href="#work">Work</a></li>
+          <li><a href="#faq">FAQ</a></li>
+          <li><a href="#contact">Contact</a></li>
+        </ul>
+      </nav>
+
+      <div class="header-actions">
+        <button class="cart-button" id="cart-open" aria-label="Open cart" aria-haspopup="dialog">
+          <svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+            <path d="M3 4h2l2.4 12.2A2 2 0 0 0 9.4 18h8.5a2 2 0 0 0 2-1.6L21.5 8H6" />
+            <circle cx="10" cy="21" r="1.3" />
+            <circle cx="18" cy="21" r="1.3" />
+          </svg>
+          <span class="cart-count" id="cart-count" aria-live="polite">0</span>
+        </button>
+        <button class="menu-toggle" id="menu-toggle" aria-label="Open menu" aria-expanded="false">
+          <span></span><span></span><span></span>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <main id="main" tabindex="-1">
+    <section class="hero" id="top">
+      <div class="container hero-inner">
+        <div class="hero-copy">
+          <p class="eyebrow">Creative Agency · Nairobi</p>
+          <h1>We build brands<br />people <em>actually</em> remember.</h1>
+          <p class="lede">Strategy, identity, social, web, and merchandise — under one roof. We connect the dots between what your brand says and what it sells.</p>
+          <div class="cta-row">
+            <a href="#shop" class="btn btn-primary">Order now</a>
+            <a href="#offer" class="btn btn-ghost">What we do →</a>
+          </div>
+          <ul class="hero-stats" aria-label="Agency results">
+            <li><strong>120+</strong><span>Projects shipped</span></li>
+            <li><strong>95%</strong><span>Client retention</span></li>
+            <li><strong>3wk</strong><span>Avg. brand sprint</span></li>
+          </ul>
+        </div>
+
+        <aside class="hero-card" aria-label="Recent results card">
+          <div class="hc-head">
+            <span class="hc-dot"></span>
+            <span>Live · Q1 snapshot</span>
+          </div>
+          <h3 class="hc-title">Brand performance</h3>
+          <ul class="hc-meters">
+            <li>
+              <div class="hc-meter-label"><span>Social reach</span><span>+92%</span></div>
+              <div class="hc-meter"><i style="--w:92%"></i></div>
+            </li>
+            <li>
+              <div class="hc-meter-label"><span>Brand recall</span><span>+78%</span></div>
+              <div class="hc-meter"><i style="--w:78%"></i></div>
+            </li>
+            <li>
+              <div class="hc-meter-label"><span>Lead quality</span><span>+85%</span></div>
+              <div class="hc-meter"><i style="--w:85%"></i></div>
+            </li>
+          </ul>
+          <p class="hc-foot">Aggregated across 14 client engagements, 2026.</p>
+        </aside>
+      </div>
+    </section>
+
+    <div class="marquee" aria-hidden="true">
+      <div class="marquee-track">
+        <span>Branding</span><span>·</span>
+        <span>Social</span><span>·</span>
+        <span>Web</span><span>·</span>
+        <span>Merch</span><span>·</span>
+        <span>Strategy</span><span>·</span>
+        <span>Branding</span><span>·</span>
+        <span>Social</span><span>·</span>
+        <span>Web</span><span>·</span>
+        <span>Merch</span><span>·</span>
+        <span>Strategy</span><span>·</span>
+      </div>
+    </div>
+
+    <section class="offer" id="offer">
+      <div class="container">
+        <header class="section-head">
+          <p class="eyebrow">What we offer</p>
+          <h2>Six disciplines. <em>One bridge.</em></h2>
+          <p class="section-lede">We don't bolt on services — we sequence them. Each engagement starts with strategy and ends with something you can hold, read, or click.</p>
+        </header>
+
+        <ul class="offer-grid">
+          <li class="offer-card">
+            <span class="offer-num">01</span>
+            <h3>Social Media Management</h3>
+            <p>Calendars, content, community. Built around your real audience, not vanity metrics.</p>
+          </li>
+          <li class="offer-card">
+            <span class="offer-num">02</span>
+            <h3>Digital Marketing</h3>
+            <p>Paid, SEO, lifecycle. Performance with a creative spine, not template ad copy.</p>
+          </li>
+          <li class="offer-card">
+            <span class="offer-num">03</span>
+            <h3>Graphic Design</h3>
+            <p>Posters, decks, motion, packaging. Crafted to look right next to anything.</p>
+          </li>
+          <li class="offer-card">
+            <span class="offer-num">04</span>
+            <h3>Branding</h3>
+            <p>Identity systems with the strategy behind them. A logo is the start, not the finish.</p>
+          </li>
+          <li class="offer-card">
+            <span class="offer-num">05</span>
+            <h3>Gift Merchandise</h3>
+            <p>Mugs, tees, sets, packaging. Things people keep, not throw out at the door.</p>
+          </li>
+          <li class="offer-card">
+            <span class="offer-num">06</span>
+            <h3>Website Design</h3>
+            <p>Sites that load fast, read well, and convert. Built to outlive a trend cycle.</p>
+          </li>
+        </ul>
+      </div>
+    </section>
+
+    <section class="shop" id="shop">
+      <div class="container">
+        <header class="section-head shop-head">
+          <div>
+            <p class="eyebrow">Shop · Services & Merch</p>
+            <h2>Pick a package. <em>Place an order.</em></h2>
+          </div>
+          <div class="shop-filter" role="tablist" aria-label="Filter products">
+            <button class="filter-btn is-active" data-filter="all" role="tab" aria-selected="true">All</button>
+            <button class="filter-btn" data-filter="Service" role="tab" aria-selected="false">Services</button>
+            <button class="filter-btn" data-filter="Merchandise" role="tab" aria-selected="false">Merch</button>
+          </div>
+        </header>
+
+        <ul class="product-grid" id="product-grid" aria-live="polite">
+          <li class="product-skeleton"></li>
+          <li class="product-skeleton"></li>
+          <li class="product-skeleton"></li>
+        </ul>
+
+        <noscript>
+          <p class="noscript-msg">
+            Interactive ordering requires JavaScript. To enquire about any package or product,
+            email <a href="mailto:hello@webridgedigital.example">hello@webridgedigital.example</a>
+            or call +254 700 000 000.
+          </p>
+        </noscript>
+      </div>
+    </section>
+
+    <section class="work" id="work">
+      <div class="container">
+        <header class="section-head">
+          <p class="eyebrow">Featured work</p>
+          <h2>Recent <em>projects.</em></h2>
+        </header>
+        <ul class="work-grid">
+          <li class="work-card">
+            <a href="#" aria-label="View Take Us Safaris case study">
+              <div class="work-media">
+                <img src="assets/work-takeussafaris.jpg" alt="Take Us Safaris Nzambani Rock Tour poster — campaign design by WeBridge Digital" loading="lazy" />
+              </div>
+              <div class="work-meta">
+                <span class="work-tag">Campaign · 2024</span>
+                <h3>Take Us Safaris</h3>
+                <p>Tour campaign posters and social rollout for a Kenyan safari brand.</p>
+              </div>
+            </a>
+          </li>
+          <li class="work-card">
+            <a href="#" aria-label="View Ster Organics case study">
+              <div class="work-media">
+                <img src="assets/work-sterorganics.jpg" alt="Ster Organics Immune Booster Flour packaging — product label design by WeBridge Digital" loading="lazy" />
+              </div>
+              <div class="work-meta">
+                <span class="work-tag">Packaging · 2025</span>
+                <h3>Ster Organics</h3>
+                <p>Pouch packaging system for a six-SKU organic flour and porridge range.</p>
+              </div>
+            </a>
+          </li>
+          <li class="work-card">
+            <a href="#" aria-label="View GoCare Institute case study">
+              <div class="work-media">
+                <img src="assets/work-gocare.jpg" alt="GoCare Training Institute Home Based Care Support marketing — healthcare education design by WeBridge Digital" loading="lazy" />
+              </div>
+              <div class="work-meta">
+                <span class="work-tag">Marketing · 2025</span>
+                <h3>GoCare Institute</h3>
+                <p>Year-long admissions creative for a Nairobi healthcare training institute.</p>
+              </div>
+            </a>
+          </li>
+          <li class="work-card">
+            <a href="#" aria-label="View Essie's Deliveries case study">
+              <div class="work-media">
+                <img src="assets/work-essies.jpg" alt="Essie's Deliveries social media post — Avoid Wrong Address Deliveries campaign by WeBridge Digital" loading="lazy" />
+              </div>
+              <div class="work-meta">
+                <span class="work-tag">Social · 2025</span>
+                <h3>Essie's Deliveries</h3>
+                <p>Social campaign and order-flow creative for a doorstep delivery service.</p>
+              </div>
+            </a>
+          </li>
+          <li class="work-card">
+            <a href="#" aria-label="View Nextshift Movers case study">
+              <div class="work-media">
+                <img src="assets/work-nextshift.jpg" alt="Nextshift Movers and Logistics business card design by WeBridge Digital" loading="lazy" />
+              </div>
+              <div class="work-meta">
+                <span class="work-tag">Identity · 2025</span>
+                <h3>Nextshift Movers</h3>
+                <p>Visual identity and stationery for a moving and logistics startup.</p>
+              </div>
+            </a>
+          </li>
+          <li class="work-card">
+            <a href="#" aria-label="View Glatex Images case study">
+              <div class="work-media">
+                <img src="assets/work-glatex.jpg" alt="Glatex Images Exam Success Cards print marketing design by WeBridge Digital" loading="lazy" />
+              </div>
+              <div class="work-meta">
+                <span class="work-tag">Print · 2024</span>
+                <h3>Glatex Images</h3>
+                <p>Seasonal print and social campaigns for a Ruiru-based print house.</p>
+              </div>
+            </a>
+          </li>
+        </ul>
+      </div>
+    </section>
+
+    <section class="testimonial">
+      <div class="container">
+        <blockquote>
+          <p>
+            <span aria-hidden="true">"</span>WeBridge didn't just design the packaging —
+            they shaped how customers see the brand on the shelf. Our reorder rate
+            doubled in the first quarter.<span aria-hidden="true">"</span>
+          </p>
+          <footer>
+            <strong>Esther M.</strong> · Founder, Ster Organics
+          </footer>
+        </blockquote>
+      </div>
+    </section>
+
+    <section class="faq" id="faq">
+      <div class="container">
+        <header class="section-head">
+          <p class="eyebrow">FAQ</p>
+          <h2>Things people <em>actually</em> ask.</h2>
+        </header>
+        <div class="faq-list">
+          <details>
+            <summary>How long does a typical project take?</summary>
+            <p>Brand identities ship in three weeks, websites in three to six, social packages run monthly. Every quote includes a written timeline before kickoff.</p>
+          </details>
+          <details>
+            <summary>Do you work with clients outside Kenya?</summary>
+            <p>Yes — we currently work with teams in Uganda, Rwanda, the UK, and the UAE. Everything ships digitally or via DHL.</p>
+          </details>
+          <details>
+            <summary>Can I order merch without a full branding project?</summary>
+            <p>Absolutely. Add merchandise items to your cart and check out — you can either send us your existing artwork or commission us to create something new.</p>
+          </details>
+          <details>
+            <summary>What payment methods do you accept?</summary>
+            <p>M-Pesa, bank transfer, and card payments via Stripe. For corporate orders we issue a 14-day invoice.</p>
+          </details>
+        </div>
+      </div>
+    </section>
+
+    <section class="cta-band">
+      <div class="container cta-inner">
+        <h2>Ready when you are.</h2>
+        <p>Tell us about the brand. We'll send a proposal within two working days.</p>
+        <a href="#contact" class="btn btn-dark">Start a project</a>
+      </div>
+    </section>
+
+    <section class="contact" id="contact">
+      <div class="container contact-inner">
+        <div class="contact-copy">
+          <p class="eyebrow">Contact</p>
+          <h2>Say hello.</h2>
+          <p>We reply within one business day. For urgent projects, call or message us directly.</p>
+          <ul class="contact-list">
+            <li><span>Email</span><a href="mailto:hello@webridgedigital.example">hello@webridgedigital.example</a></li>
+            <li><span>Phone</span><a href="tel:+254700000000">+254 700 000 000</a></li>
+            <li><span>Studio</span>Westlands, Nairobi · KE</li>
+          </ul>
+        </div>
+
+        <form class="contact-form" id="contact-form" novalidate>
+          <div class="field">
+            <label for="cf-name">Your name</label>
+            <input id="cf-name" name="name" type="text" required autocomplete="name" />
+            <span class="error" data-for="cf-name"></span>
+          </div>
+          <div class="field">
+            <label for="cf-email">Email</label>
+            <input id="cf-email" name="email" type="email" required autocomplete="email" />
+            <span class="error" data-for="cf-email"></span>
+          </div>
+          <div class="field">
+            <label for="cf-msg">Tell us about your project</label>
+            <textarea id="cf-msg" name="message" rows="5" required></textarea>
+            <span class="error" data-for="cf-msg"></span>
+          </div>
+          <button type="submit" class="btn btn-primary btn-full">Send message</button>
+          <p class="form-success" id="cf-success" hidden>
+            Thank you — we've received your message. We'll be in touch within one business day.
+          </p>
+        </form>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer" role="contentinfo">
+    <div class="container footer-inner">
+      <div class="footer-brand">
+        <img src="assets/logo.jpg" alt="WeBridge Digital" class="logo-img" width="56" height="56" />
+        <p>WeBridge Digital — a creative bridge between brands and the people who buy from them.</p>
+      </div>
+      <div class="footer-cols">
+        <div>
+          <h4>Studio</h4>
+          <ul>
+            <li><a href="#offer">Services</a></li>
+            <li><a href="#shop">Shop</a></li>
+            <li><a href="#work">Work</a></li>
+          </ul>
+        </div>
+        <div>
+          <h4>Company</h4>
+          <ul>
+            <li><a href="#faq">FAQ</a></li>
+            <li><a href="#contact">Contact</a></li>
+            <li><a href="#">Careers</a></li>
+          </ul>
+        </div>
+        <div class="footer-newsletter">
+          <h4>Quarterly notes</h4>
+          <p>Field notes from the studio. Four times a year, no spam.</p>
+          <form id="newsletter-form" novalidate>
+            <input type="email" required placeholder="you@brand.com" aria-label="Email address" />
+            <button type="submit" class="btn btn-primary btn-sm">Subscribe</button>
+          </form>
+          <p class="ns-msg" id="ns-msg" aria-live="polite"></p>
+        </div>
+      </div>
+    </div>
+    <div class="footer-bottom container">
+      <span>© 2026 WeBridge Digital. All rights reserved.</span>
+      <span>Made in Nairobi.</span>
+    </div>
+  </footer>
+
+  <aside class="cart-drawer" id="cart-drawer" aria-hidden="true" aria-label="Shopping cart" role="dialog" tabindex="-1">
+    <div class="cart-head">
+      <h2>Your cart</h2>
+      <button class="icon-btn" id="cart-close" aria-label="Close cart">×</button>
+    </div>
+    <div class="cart-body" id="cart-body">
+      <p class="cart-empty">Your cart is empty.</p>
+    </div>
+    <div class="cart-foot" id="cart-foot" hidden>
+      <dl class="cart-totals">
+        <div><dt>Subtotal</dt><dd id="cart-subtotal">KSh 0</dd></div>
+        <div><dt>VAT (16%)</dt><dd id="cart-tax">KSh 0</dd></div>
+        <div><dt>Shipping</dt><dd id="cart-shipping">KSh 0</dd></div>
+        <div class="cart-grand"><dt>Total</dt><dd id="cart-total">KSh 0</dd></div>
+      </dl>
+      <button class="btn btn-primary btn-full" id="checkout-open">Checkout</button>
+    </div>
+  </aside>
+  <div class="overlay" id="overlay" hidden></div>
+
+  <div class="modal" id="checkout-modal" aria-hidden="true" role="dialog" aria-modal="true" aria-labelledby="checkout-title" tabindex="-1">
+    <div class="modal-inner">
+      <header class="modal-head">
+        <h2 id="checkout-title">Checkout</h2>
+        <button class="icon-btn" id="checkout-close" aria-label="Close checkout">×</button>
+      </header>
+      <form id="checkout-form" novalidate>
+        <fieldset>
+          <legend>Customer</legend>
+          <div class="grid-2">
+            <div class="field">
+              <label for="co-name">Full name</label>
+              <input id="co-name" name="name" type="text" required autocomplete="name" />
+              <span class="error" data-for="co-name"></span>
+            </div>
+            <div class="field">
+              <label for="co-email">Email</label>
+              <input id="co-email" name="email" type="email" required autocomplete="email" />
+              <span class="error" data-for="co-email"></span>
+            </div>
+          </div>
+          <div class="field">
+            <label for="co-phone">Phone</label>
+            <input id="co-phone" name="phone" type="tel" required autocomplete="tel" placeholder="+254 700 000 000" />
+            <span class="error" data-for="co-phone"></span>
+          </div>
+        </fieldset>
+
+        <fieldset>
+          <legend>Shipping (for merch only)</legend>
+          <div class="field">
+            <label for="co-addr">Street address</label>
+            <input id="co-addr" name="address" type="text" autocomplete="street-address" />
+          </div>
+          <div class="grid-2">
+            <div class="field">
+              <label for="co-city">City</label>
+              <input id="co-city" name="city" type="text" autocomplete="address-level2" />
+            </div>
+            <div class="field">
+              <label for="co-country">Country</label>
+              <input id="co-country" name="country" type="text" value="Kenya" autocomplete="country-name" />
+            </div>
+          </div>
+        </fieldset>
+
+        <fieldset>
+          <legend>Payment</legend>
+          <div class="pay-options" role="radiogroup" aria-label="Payment method">
+            <label class="pay-opt">
+              <input type="radio" name="payment" value="card" checked />
+              <span>Card (Stripe)</span>
+            </label>
+            <label class="pay-opt">
+              <input type="radio" name="payment" value="mpesa" />
+              <span>M-Pesa</span>
+            </label>
+            <label class="pay-opt">
+              <input type="radio" name="payment" value="invoice" />
+              <span>Invoice</span>
+            </label>
+          </div>
+          <p class="pay-note">This is a demo checkout. No payment is processed.</p>
+        </fieldset>
+
+        <div class="checkout-summary" id="checkout-summary"></div>
+        <button class="btn btn-primary btn-full" type="submit">Place order</button>
+      </form>
+    </div>
+  </div>
+
+  <div class="modal modal-success" id="success-modal" aria-hidden="true" role="dialog" aria-modal="true" aria-labelledby="success-title" tabindex="-1">
+    <div class="modal-inner">
+      <button class="icon-btn modal-close-floating" id="success-close" aria-label="Close">×</button>
+      <div class="success-icon" aria-hidden="true">✓</div>
+      <h2 id="success-title">Order received.</h2>
+      <p>Thank you, <strong id="success-name">friend</strong>. Your order <strong id="success-id">#000000</strong> is in.</p>
+      <p class="success-sub">A confirmation has been sent to <span id="success-email">your email</span>. For digital deliverables we'll reach out within one business day to kick off.</p>
+      <div class="success-actions">
+        <button class="btn btn-primary" id="success-print">Print receipt</button>
+        <button class="btn btn-ghost" id="success-done">Done</button>
+      </div>
+    </div>
+  </div>
+
+  <div class="modal modal-quickview" id="quickview-modal" aria-hidden="true" role="dialog" aria-modal="true" aria-labelledby="qv-title" tabindex="-1">
+    <div class="modal-inner">
+      <button class="icon-btn modal-close-floating" id="quickview-close" aria-label="Close quick view">×</button>
+      <div class="qv-grid">
+        <img id="qv-img" src="" alt="" loading="lazy" />
+        <div>
+          <p class="eyebrow" id="qv-cat"></p>
+          <h2 id="qv-title"></h2>
+          <p class="qv-price" id="qv-price"></p>
+          <p id="qv-desc"></p>
+          <p class="qv-delivery" id="qv-delivery"></p>
+          <button class="btn btn-primary btn-full" id="qv-add">Add to cart</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <script src="app.js"></script>
+</body>
+</html>
