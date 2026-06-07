@@ -8,6 +8,10 @@
 (() => {
   'use strict';
 
+  // ---------- CONFIG ----------
+  // Orders and enquiries are sent here via WhatsApp. Change this number to update everywhere.
+  const WHATSAPP_NUMBER = '254142310024';
+
   // ---------- STATE ----------
   let CATALOG = null;
   let CART = loadCart();
@@ -39,10 +43,10 @@
     successModal: $('#success-modal'),
     successClose: $('#success-close'),
     successDone: $('#success-done'),
-    successPrint: $('#success-print'),
     successName: $('#success-name'),
     successId: $('#success-id'),
-    successEmail: $('#success-email'),
+    waOpenBtn: $('#wa-open-btn'),
+    waFallback: $('#wa-fallback'),
     quickviewModal: $('#quickview-modal'),
     quickviewClose: $('#quickview-close'),
     qvImg: $('#qv-img'),
@@ -73,7 +77,7 @@
       els.productGrid.innerHTML = `
         <li class="noscript-msg">
           We couldn't load the product catalog. Please refresh, or contact
-          <a href="mailto:hello@webridgedigital.example">hello@webridgedigital.example</a>.
+          <a href="mailto:dwebridge@gmail.com">dwebridge@gmail.com</a>.
         </li>`;
       return;
     }
@@ -314,7 +318,6 @@
     els.quickviewClose.addEventListener('click', () => closeModal(els.quickviewModal));
     els.successClose.addEventListener('click', () => closeModal(els.successModal));
     els.successDone.addEventListener('click', () => closeModal(els.successModal));
-    els.successPrint.addEventListener('click', () => window.print());
     els.checkoutClose.addEventListener('click', () => closeModal(els.checkoutModal));
 
     [els.quickviewModal, els.successModal, els.checkoutModal].forEach(m => {
@@ -379,13 +382,54 @@
     `;
   }
 
+  function paymentLabel(v) {
+    return ({ card: 'Card', mpesa: 'M-Pesa', invoice: 'Invoice' })[v] || v;
+  }
+
   function submitOrder() {
     const orderId = '#' + Math.random().toString(36).substring(2, 8).toUpperCase();
     const name = $('#co-name').value.trim();
     const email = $('#co-email').value.trim();
+    const phone = $('#co-phone').value.trim();
+    const addr = $('#co-addr').value.trim();
+    const city = $('#co-city').value.trim();
+    const country = $('#co-country').value.trim();
+    const payEl = els.checkoutForm.querySelector('input[name="payment"]:checked');
+    const payment = paymentLabel(payEl ? payEl.value : '');
+    const { subtotal, tax, shipping, total } = cartTotals();
 
-    /* PRODUCTION HOOK
-       Replace this block with a POST to your server. See server-example.js. */
+    // Build the WhatsApp order message
+    const lines = [];
+    lines.push('New order — WeBridge Digital ' + orderId);
+    lines.push('');
+    lines.push('Items:');
+    CART.forEach(i => {
+      const p = CATALOG.products.find(x => x.id === i.id);
+      if (p) lines.push(`• ${p.name} x${i.qty} — ${formatPrice(p.price * i.qty)}`);
+    });
+    lines.push('');
+    lines.push(`Subtotal: ${formatPrice(subtotal)}`);
+    lines.push(`VAT (16%): ${formatPrice(tax)}`);
+    if (hasMerchandise()) lines.push(`Shipping: ${shipping === 0 ? 'Free' : formatPrice(shipping)}`);
+    lines.push(`Total: ${formatPrice(total)}`);
+    lines.push('');
+    lines.push('Customer:');
+    lines.push(`Name: ${name}`);
+    lines.push(`Email: ${email}`);
+    lines.push(`Phone: ${phone}`);
+    if (hasMerchandise() && (addr || city)) {
+      lines.push(`Address: ${[addr, city, country].filter(Boolean).join(', ')}`);
+    }
+    lines.push(`Preferred payment: ${payment}`);
+
+    const waURL = `https://wa.me/${WHATSAPP_NUMBER}?text=${encodeURIComponent(lines.join('\n'))}`;
+
+    // Open WhatsApp with the order pre-filled (user-initiated, so popups are allowed)
+    window.open(waURL, '_blank');
+
+    // Point the success-modal links at the same pre-filled order in case the popup was blocked
+    if (els.waOpenBtn) els.waOpenBtn.href = waURL;
+    if (els.waFallback) els.waFallback.href = waURL;
 
     CART = [];
     saveCart();
@@ -393,7 +437,6 @@
     closeModal(els.checkoutModal);
     els.successName.textContent = name.split(' ')[0] || 'friend';
     els.successId.textContent = orderId;
-    els.successEmail.textContent = email;
     openModal(els.successModal);
   }
 
