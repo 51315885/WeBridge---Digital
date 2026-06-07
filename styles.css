@@ -299,18 +299,24 @@ h1, h2, h3, h4 {
 
 /* ----- 9. OFFER ----------------------------------------------------------- */
 .offer { padding: var(--s-10) 0; background: var(--bg-soft); }
-.offer-grid { display: grid; gap: var(--s-4); grid-template-columns: 1fr; }
+.offer-grid { display: grid; gap: var(--s-5); grid-template-columns: 1fr; }
 .offer-card {
-  position: relative; padding: var(--s-6); background: #fff;
+  position: relative; background: #fff; overflow: hidden;
   border: 1px solid var(--line); border-radius: var(--r-lg);
+  display: grid; grid-template-rows: auto 1fr;
   transition: transform var(--t-med) var(--ease), box-shadow var(--t-med) var(--ease), border-color var(--t-med) var(--ease);
 }
 .offer-card:hover { transform: translateY(-5px); box-shadow: var(--shadow-2); border-color: rgba(224,162,58,.4); }
+.offer-media { position: relative; aspect-ratio: 16 / 10; overflow: hidden; background: var(--bg-soft); }
+.offer-media img { width: 100%; height: 100%; object-fit: cover; transition: transform var(--t-slow) var(--ease); }
+.offer-card:hover .offer-media img { transform: scale(1.05); }
 .offer-num {
-  display: inline-block; font-family: var(--font-display); font-size: .9rem; font-weight: 800;
-  color: var(--gold-700); margin-bottom: var(--s-5); padding-bottom: var(--s-2);
-  border-bottom: 2px solid var(--gold-300);
+  position: absolute; top: var(--s-3); left: var(--s-3);
+  font-family: var(--font-display); font-size: .8rem; font-weight: 800;
+  color: var(--gold-400); background: var(--navy-700);
+  padding: .3rem .7rem; border-radius: var(--r-pill);
 }
+.offer-text { padding: var(--s-5) var(--s-6) var(--s-6); }
 .offer-card h3 { font-size: var(--fs-h3); margin-bottom: var(--s-3); }
 .offer-card p { color: var(--body); font-size: .95rem; }
 
@@ -439,6 +445,16 @@ h1, h2, h3, h4 {
 .field.is-invalid input, .field.is-invalid textarea { border-color: #E0526B; background: #FFF5F6; }
 .error { color: #C9304A; font-size: .78rem; min-height: 0; }
 .form-success { background: var(--gold-100); border: 1px solid rgba(224,162,58,.35); padding: var(--s-4); border-radius: var(--r-md); font-size: .95rem; color: var(--ink); }
+
+/* Contact — navy (logo) variant */
+.contact-dark { background: var(--navy-700); }
+.contact-dark .eyebrow { color: var(--gold-400); }
+.contact-dark .contact-copy h2 { color: #fff; }
+.contact-dark .contact-copy > p { color: rgba(255,255,255,.72); }
+.contact-dark .contact-list li { color: rgba(255,255,255,.82); border-bottom-color: rgba(255,255,255,.12); }
+.contact-dark .contact-list span { color: rgba(255,255,255,.5); }
+.contact-dark .contact-list a { color: #fff; }
+.contact-dark .contact-list a:hover { color: var(--gold-400); }
 
 /* ----- 16. FOOTER (navy) -------------------------------------------------- */
 .site-footer { background: var(--navy-800); color: rgba(255,255,255,.72); padding: var(--s-9) 0 var(--s-5); }

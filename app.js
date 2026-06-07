@@ -11,6 +11,8 @@
   // ---------- CONFIG ----------
   // Orders and enquiries are sent here via WhatsApp. Change this number to update everywhere.
   const WHATSAPP_NUMBER = '254142310024';
+  // Contact form submissions are emailed here (via FormSubmit.co — no backend needed).
+  const CONTACT_EMAIL = 'dwebridge@gmail.com';
 
   // ---------- STATE ----------
   let CATALOG = null;
@@ -470,14 +472,49 @@
     return ok;
   }
 
-  // ---------- CONTACT FORM ----------
+  // ---------- CONTACT FORM (emails dwebridge@gmail.com via FormSubmit) ----------
   function bindContactForm() {
-    els.contactForm.addEventListener('submit', e => {
+    els.contactForm.addEventListener('submit', async e => {
       e.preventDefault();
       if (!validateForm(els.contactForm, ['cf-name', 'cf-email', 'cf-msg'])) return;
-      els.contactForm.reset();
-      els.contactSuccess.hidden = false;
-      setTimeout(() => { els.contactSuccess.hidden = true; }, 8000);
+
+      const name = $('#cf-name').value.trim();
+      const email = $('#cf-email').value.trim();
+      const message = $('#cf-msg').value.trim();
+      const submitBtn = els.contactForm.querySelector('button[type="submit"]');
+      const originalLabel = submitBtn.textContent;
+      submitBtn.disabled = true;
+      submitBtn.textContent = 'Sending…';
+
+      try {
+        const res = await fetch('https://formsubmit.co/ajax/' + CONTACT_EMAIL, {
+          method: 'POST',
+          headers: { 'Content-Type': 'application/json', 'Accept': 'application/json' },
+          body: JSON.stringify({
+            name,
+            email,
+            message,
+            _subject: 'New enquiry from WeBridge Digital website',
+            _template: 'table',
+            _captcha: 'false'
+          })
+        });
+        const data = await res.json().catch(() => ({}));
+        if (!res.ok || !(data.success === true || data.success === 'true')) {
+          throw new Error('FormSubmit failed');
+        }
+        els.contactForm.reset();
+        els.contactSuccess.hidden = false;
+        setTimeout(() => { els.contactSuccess.hidden = true; }, 8000);
+      } catch (err) {
+        // Fallback: open the visitor's email client with the message pre-filled
+        const subject = encodeURIComponent('Project enquiry — ' + (name || 'WeBridge Digital'));
+        const body = encodeURIComponent(`Name: ${name}\nEmail: ${email}\n\n${message}`);
+        window.location.href = `mailto:${CONTACT_EMAIL}?subject=${subject}&body=${body}`;
+      } finally {
+        submitBtn.disabled = false;
+        submitBtn.textContent = originalLabel;
+      }
     });
   }
 
